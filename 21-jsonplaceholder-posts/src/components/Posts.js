@@ -10,8 +10,8 @@ function Posts() {
 
   useEffect(() => {
     fetch(API_URL)
-      .then((response) => response.json())
-      .then((json) => setPosts(json))
+      .then((res) => res.json())
+      .then((posts) => setPosts(posts))
       .catch((error) => setError(error.message))
       .finally(() => setIsLoading(false))
   }, [])
